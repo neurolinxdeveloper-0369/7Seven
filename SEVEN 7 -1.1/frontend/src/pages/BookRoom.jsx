@@ -21,7 +21,7 @@ function BookRoom() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/bookings', formData);
+      await axios.post('/api/bookings', formData);
       setStatus('Booking successful!');
       setFormData({ name: '', email: '', phone: '', checkIn: '', checkOut: '', roomType: 'Big Suite', guests: 1 });
     } catch (error) {
